@@ -24,6 +24,12 @@ public class MoveZeroToEnd {
 		
 		System.out.println("Arrays after shifting zero to end : "+Arrays.toString(moveZeroToEnd(array)));
 		
+		
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		// efficient method is given below 
+		
+		System.out.println("Arrays after shifting zero to the end : "+Arrays.toString(efficientMoveZeroToEnd(array)));
+		
 		sc.close();
 	}
 	
@@ -44,6 +50,25 @@ public class MoveZeroToEnd {
 						array[i] = temp;
 					}
 				}
+			}
+		}
+		
+		return array;
+	}
+	
+	public static int[] efficientMoveZeroToEnd(int[] array)
+	{
+		int count_to_swap_with_zero = 0;
+		int temp = 0;
+				
+		for(int i=0;i<array.length;i++) // [ 10 , 5, 0, 8, 9, 0 ] 10 with 10 as count will be 0 5 with 5 as count will be 1 
+		{
+			if(array[i]!=0)
+			{
+				temp = array[i];
+				array[i] = array[count_to_swap_with_zero];
+				array[count_to_swap_with_zero] = temp;
+				count_to_swap_with_zero++;
 			}
 		}
 		
