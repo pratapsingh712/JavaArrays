@@ -25,6 +25,8 @@ public class SecondLargestEfficientApproach {
 		System.out.println("After calculating my largest element is = "+result.charAt(0));
 		
 		System.out.println("After calculating my second largest element is = "+result.charAt(2));
+		
+		sc.close();
 
 	}
 
