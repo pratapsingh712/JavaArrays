@@ -28,12 +28,14 @@ public class LeadersInArray {
 		
 		System.out.println("Leaders in the array elements are : ");
 		
-		int count = leaderElements(array); // now i need to print the array until the count index 
+		//int count = leaderElements(array); // now i need to print the array until the count index 
 		
-		for(int i=0;i<count;i++)
+		/*(for(int i=0;i<count;i++)
 		{
 			System.out.print(array[i]+",");
-		}
+		}*/
+		
+		efficientLeaderSearch(array);
 		
 		sc.close();
 	}
@@ -64,5 +66,22 @@ public class LeadersInArray {
 		}
 		
 		return count;
+	}
+	
+	public static void efficientLeaderSearch(int array[])
+	{
+		int currLeader = array[array.length-1]; // for understanding otherwise i could have directly printed last element
+		
+		System.out.print("Leader elements are : "+currLeader+" ");
+		
+		for(int i=array.length-2;i>=0;i--)
+		{
+			if(array[i]>currLeader)
+			{
+				currLeader = array[i];
+				System.out.print(currLeader+" ");	
+			}
+		}
+		
 	}
 }

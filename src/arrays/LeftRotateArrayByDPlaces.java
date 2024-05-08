@@ -32,6 +32,8 @@ public class LeftRotateArrayByDPlaces {
 		
 		System.out.println("Array after left rotating the array : "+Arrays.toString(array));
 		
+		System.out.println("");
+		
 		sc.close();
 	}
 	
