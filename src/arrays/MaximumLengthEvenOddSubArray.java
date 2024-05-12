@@ -92,6 +92,6 @@ public class MaximumLengthEvenOddSubArray {
 			remainder[i] = array[i]%2;
 		}
 		
-		return remainder;
+		return remainder; //hello
 	}
 }
